@@ -2,6 +2,23 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-05-29 — upgrade pass (Group A)
+
+Scope contract:
+1. Motivate the four factors before the formula: add an impostor-preview
+   paragraph in §6.2 ahead of the Definition; replace the throat-clear transition.
+2. Cut §6.3 "The right-hand side, audited" — redundant with the Definition's
+   closing line and §9's opening.
+3. Sharpen the Rosen vs Moreno-Mossio distinction in §3.4 (efficient causes vs
+   the wider class of constraints).
+4. Add Barbieri's code biology to §3.5 (semantic closure) + bibliography.
+5. Voice tightenings: §3.1 "grammar" cadence; §5.1 bloated Lorenz sentence;
+   §9 "The order of construction is the important point" throat-clear + the
+   italic takeaway-label on the latent variable.
+
+Verification: voice 0 errors; refs 0 missing (Barbieri added both sides); claims
+trace to results.json (no new numbers); build clean; check => PASS.
+
 ## 2026-05-13 — reference expansion
 
 Scope: a synthesis on agency was missing cornerstone authors; broaden and
