@@ -1,0 +1,10 @@
+[project]
+name = "owned-causality-sim"
+version = "0.1.0"
+description = "Numerical illustration of the owned-causality formula on a bistable organisation and a six-rung agency ladder"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]

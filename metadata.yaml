@@ -1,0 +1,14 @@
+slug: owned-causality
+web_slug: owned-causality
+title: "Owned Causality: Constraint Closure, Basin Steering, and the Emergence of Agency from Chemistry"
+header: "Owned Causality"
+created: "2026-05"        # inception month (drives YYYY/MM archive path)
+date: "May 2026"            # publication month (shown on web)
+paper_dir: paper
+has_simulation: true
+claims_target: results.json      # results.json | claim-ledger | none
+repo: git@github.com:piatra-institute/papers-owned-causality.git
+github: https://github.com/piatra-institute/papers-owned-causality
+status: published              # draft | built | published
+abstract: |-
+  A causal influence is owned when a persistent organisation produces the constraints that generate it, those constraints steer the organisation's future attractor regime, and the resulting regime feeds back into the production of further constraints. The right primitive for agency must be definable without "I" or "self" on the right-hand side, on pain of circularity. The paper assembles a single mathematical object that absorbs ideas from chemical reaction-network theory (Feinberg), chemical organisation theory (Dittrich and Speroni di Fenizio), autocatalytic-set and RAF theory (Kauffman, Hordijk and Steel), closure to efficient causation (Rosen, Hofmeyr), closure of constraints (Moreno, Mossio, Montévil), autopoiesis (Maturana and Varela), semantic closure (Pattee, Hoffmeyer, Kolchinsky and Wolpert), Markov-blanket inference (Friston, Kirchhoff et al.), basin dynamics (Lorenz), and circular causality across levels (Haken). Owned causality is a product of four factors: closure of constraints excludes thermostats; directed information from endogenous perturbations to future macrostate excludes systems mostly pushed by environment; viability gain over a scrambled-constraint counterfactual excludes random internal explosions; mutual information from achieved macrostate to future constraints excludes one-shot influences. The simulation computes the formula on a six-rung agency ladder running a common bistable dynamics. The two rungs with externally specified rules (rock and thermostat) score zero; the four with internal constraint production (flame, RAF, chemoton, organism) score between 2.2e-5 and 2.1e-4. A second simulation traces the handover from an external scaffold to the organism's own constraint deployment: directed information from the scaffold falls from a peak of 0.037 to near zero while directed information from endogenous constraints rises to a peak of 0.403, the traces crossing at window 6 of 20, with viability between 0.885 and 1.000. The pathological case is the contrapositive of the same equation. The "I" appears later as a compressed model of recurrent high-owned-causality history.
