@@ -2,6 +2,21 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-06-13 — voice reform
+
+Voice-reform editing pass to remove AI-writing tells (house voice.md).
+
+Lexical density: before — carries/carry 5, the very 3, genuinely 2, exactly 1, load-bearing 1; tricolon proxy 35. After — carries/carry 5, the very 3, genuinely 2; tricolon proxy 35.
+
+Changes:
+- Fixed five inline-contrastive (", not Z") constructions into positive declaratives: §2 ("exhibit it on top of, not instead of" -> "exhibit the same structural property, with consciousness layered above it"); §3.3 ("chemistry in a soup, not yet an organisation" -> "still chemistry in a soup; it remains short of an organisation"); §3.4 ("constraint deployment, not direct material push" -> "rather than direct material push"); §4.1 ("arrives with the closure, not on top of it" -> "arrives with the closure itself, already present in the act of self-maintenance").
+- Retitled §5 from the contrastive "Basin steering, not point control" to "Agency as basin steering". Paper title ("Basin Steering") and §5.1 cross-references unaffected; no internal references to the old heading.
+- Removed pet-vocabulary "load-bearing" in §6.2 ("was load-bearing for survival" -> "was necessary for survival"); deleted filler "exactly" in §9 closing.
+- Varied a repeated rhythmic device: §8.1 keeps "Same architecture, different attractor"; §9 closing changed from "Same architecture, different downstream phenomenology" to a plain declarative.
+- §2 distinctive opener ("What 'owned' is not") kept. No numbers, citations, math, or tables touched. En-dashes in reference page ranges left intact (pandoc convention, not the banned em-dash).
+
+Verify: voice 0 errors, 0 warns; refs 44 in-text keys unchanged, 0 missing, 1 unused (pre-existing); claims no-match values pre-existing (scientific-notation table values and the 10.9 ratio, untouched); build clean; check => PASS.
+
 ## 2026-05-29 — upgrade pass (Group A)
 
 Scope contract:
