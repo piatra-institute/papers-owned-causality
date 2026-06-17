@@ -25,7 +25,7 @@ The paper has three goals. The first is to identify what each tradition from che
 
 ## 2. What "owned" is not
 
-The word "owned" carries everyday meanings that the formal primitive must shed. Four common candidates fail.
+The word "owned" holds everyday meanings that the formal primitive must shed. Four common candidates fail.
 
 *Caused inside the boundary* fails. A stomach spasm is caused inside the body but is not owned in any agentic sense. A reflex starts internally but only weakly counts as the agent's action. A spasm or a reflex does not have the architecture that makes its causal effect feed back into the system's future ability to act. It happens to the organisation. The organisation does not produce it as a constraint that the rest of the organisation continues to recruit.
 
@@ -169,7 +169,7 @@ $\Gamma_T$ kills the thermostat. A thermostat has feedback, but its control rule
 
 $DI(U^{\Omega} \to Q \mid X, E)$ kills the leaf in the wind. A leaf has internal state, and that internal state correlates with future basin occupancy, but conditional on the wind direction the leaf carries no information about where it lands. The directed-information factor, conditioned on the external trajectory, captures only the steering that genuinely originates inside the organisation. Massey's directed-information formulation (Massey, 1990; Schreiber, 2000) and the do-calculus apparatus of Pearl (2009) give the technical content.
 
-$\Delta V_T$ kills the random internal explosion. A system can carry strong internal dynamics that influence its future regime, but if those dynamics do not preserve or improve viability they are not agency. The scrambling-counterfactual test gives the operational handle: replace the constraint trajectory with a time-shuffled version, rerun the dynamics with the same external trajectory, and see whether viability survives. If $\Delta V_T$ is positive, the timing of the constraint deployment was necessary for survival. Klyubin, Polani and Nehaniv's *empowerment* measure (Klyubin et al., 2005) is a closely related quantity from agent-centric information theory.
+$\Delta V_T$ kills the random internal explosion. A system can sustain strong internal dynamics that influence its future regime, but if those dynamics do not preserve or improve viability they are not agency. The scrambling-counterfactual test gives the operational handle: replace the constraint trajectory with a time-shuffled version, rerun the dynamics with the same external trajectory, and see whether viability survives. If $\Delta V_T$ is positive, the timing of the constraint deployment was necessary for survival. Klyubin, Polani and Nehaniv's *empowerment* measure (Klyubin et al., 2005) is a closely related quantity from agent-centric information theory.
 
 $I(Q_{t+T}; C_{t+T:t+2T} \mid \Lambda_{t+T})$ kills the one-shot reflex. A reflex affects the future once, then has no further effect on the organisation's behaviour. An agentic process is recursive: achieved regimes update future constraints. In a cell, the stress response changes gene expression. In a bacterium, chemotactic history changes receptor methylation. In an immune system, exposure changes recognition. In a nervous system, success changes policy priors. In a human, an act changes habit, confidence, memory. The re-entry factor measures this recursive incorporation. Without it, there is causality. With it, there is agency.
 
@@ -254,7 +254,7 @@ Damasio's account of homeostasis and feeling supplies the somatic counterpart (D
 
 Recurrent high $\mathfrak{O}_T$ generates the "I" as its statistical summary. Agency begins with constraint-closing organisation; selfhood is what such an organisation eventually comes to model itself as.
 
-Systems can be agentic without being selves. Bacteria, immune systems, embryos, and bounded autocatalytic networks all carry positive $\mathfrak{O}_T$ over their relevant horizons, without having any "I" model. They own their causality in the structural sense without ever needing to describe themselves as doing so.
+Systems can be agentic without being selves. Bacteria, immune systems, embryos, and bounded autocatalytic networks all bear positive $\mathfrak{O}_T$ over their relevant horizons, without having any "I" model. They own their causality in the structural sense without ever needing to describe themselves as doing so.
 
 Selves can vary in confidence. The same human in different stress states can have substantially different $\mathfrak{O}_T$ profiles over the same period, and the latent "I" is correspondingly more or less stable. The variability is a property of the higher-level summary, which inherits any volatility in the $\mathfrak{O}_T$ trace it compresses.
 
