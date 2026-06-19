@@ -99,3 +99,59 @@ def directed_information_per_step(
     if s.shape != t.shape or s.ndim != 1 or len(s) < 4:
         return 0.0
     return mutual_information(s[:-1], t[1:], n_bins=n_bins)
+
+
+def _bin_multi(z: np.ndarray, n_bins: int) -> np.ndarray:
+    """Bin one or more conditioning series and hash to a single integer code.
+
+    z is shape (T,) for a single conditioner or (T, k) for k conditioners.
+    Each column is quantile-binned, then the per-step bin tuple is hashed to a
+    unique integer so it can be passed as a single conditioning variable.
+    """
+    z = np.asarray(z, dtype=float)
+    if z.ndim == 1:
+        return _bin_series(z, n_bins)
+    cols = [_bin_series(z[:, j], n_bins) for j in range(z.shape[1])]
+    keys = np.zeros(z.shape[0], dtype=np.int64)
+    factor = 1
+    for col in cols:
+        keys = keys + col.astype(np.int64) * factor
+        factor *= int(col.max()) + 1
+    return keys
+
+
+def conditional_directed_information_per_step(
+    source: np.ndarray,
+    target: np.ndarray,
+    cond: np.ndarray,
+    n_bins: int = 4,
+) -> float:
+    """Conditional per-step directed information
+
+        DI(source -> target | cond) approx  I( source_t ; target_{t+1} | cond_t ),
+
+    the time-directed dependence of the target's next value on the current
+    source, with the current conditioning state (here the system state X_t and
+    the external drive E_t) held fixed. This is the estimator the owned-causality
+    definition calls for: conditioning on (X_t, E_{t:t+T}) factors out the
+    influence that the macrostate inherits from its own current state and from
+    the environment, leaving only the steering that originates inside the
+    organisation. cond may be a single series (T,) or a stack (T, k).
+    """
+    s = np.asarray(source, dtype=float)
+    t = np.asarray(target, dtype=float)
+    if s.ndim != 1 or t.ndim != 1 or s.shape != t.shape or len(s) < 4:
+        return 0.0
+    src = s[:-1]
+    tgt = t[1:]
+    z = np.asarray(cond, dtype=float)
+    z_now = z[:-1] if z.ndim == 1 else z[:-1, :]
+    cs = _bin_series(src, n_bins)
+    ct = _bin_series(tgt, n_bins)
+    cz = _bin_multi(z_now, n_bins)
+    h_sz = _joint_entropy(cs, cz)
+    h_tz = _joint_entropy(ct, cz)
+    h_z = _joint_entropy(cz)
+    h_stz = _joint_entropy(cs, ct, cz)
+    cmi = h_sz + h_tz - h_z - h_stz
+    return max(0.0, cmi)
