@@ -208,11 +208,7 @@ The four closure-bearing rungs all have positive $\mathfrak{O}_T$, between $1.0 
 
 No single factor ranks the rungs by itself. Once the directed-information factor is conditioned on $X_t$ and $E_t$, the thermostat's apparent control vanishes: its constraint is a deterministic function of the current state, so conditioning on that state removes essentially all of its information about the next macrostate, and $DI(U^{\Omega} \to Q \mid X, E) \approx 0.000$. The conditional directed-information factor therefore already discounts state-locked feedback before the closure factor is applied. Among the closure-bearing rungs the conditional directed information is small and comparable ($0.010$ to $0.018$), so the spread in $\mathfrak{O}_T$ is carried mostly by $\Delta V_T$ and $I(Q; C)$. The product structure of $\mathfrak{O}_T$, in which each factor can veto, is what makes the closure boundary sharp.
 
-\begin{proposition}[Closure boundary]
-If $\Gamma_T(\Omega) = 0$, then $\mathfrak{O}_T(\Omega) = 0$, regardless of the values of $DI(U^{\Omega} \to Q)$, $\Delta V_T$, or $I(Q; C)$.
-\end{proposition}
-
-\noindent\textit{Proof.} Direct from the definition: $\mathfrak{O}_T$ is the product of four non-negative factors, so vanishing of any factor sends the product to zero. The thermostat in Table 1 exhibits this: its viability factor $\Delta V_T = 0.090$ is substantial, but $\Gamma_T = 0$ forces $\mathfrak{O}_T = 0$. The same applies to any system whose control rule is supplied by an external designer rather than maintained inside the organisation. The closure factor is the formula's filter on externalised control. $\square$
+The boundary itself is structural, not empirical, and it needs no more than the arithmetic of a product to state. Because $\mathfrak{O}_T$ is a product of four non-negative factors, any one of them vanishing sends the whole to zero, so $\Gamma_T = 0$ alone forces $\mathfrak{O}_T = 0$ whatever the other three factors do. The thermostat in Table 1 shows the annulment directly: its viability factor $\Delta V_T = 0.090$ is substantial, and its closure factor $\Gamma_T = 0$ cancels it along with everything else, because a control rule supplied by an external designer earns no maintained-constraint credit. The closure factor is the formula's filter on externalised control, and it cannot be outvoted.
 
 
 ## 8. Scaffolding and the handover
@@ -231,13 +227,7 @@ The simulation runs a bistable organism starting at $x_0 = -0.95$ (deep in basin
 
 The directed-information traces show the handover quantitatively. During the scaffold-active windows ($0$ through $5$), $DI(U^{\text{ext}} \to Q)$ runs between $0.003$ and $0.027$ while $DI(U^{\Omega} \to Q)$ stays at or near zero (it is $0$ through window $4$ and $0.007$ at window $5$). As the scaffold withdraws (windows $6$ through $9$), $DI(U^{\Omega} \to Q)$ rises rapidly, crossing $DI(U^{\text{ext}} \to Q)$ at window $6$ and continuing to grow. During the post-scaffold windows ($10$ through $19$), $DI(U^{\Omega} \to Q)$ runs between $0.159$ and $0.403$ while $DI(U^{\text{ext}} \to Q)$ stays below $0.012$. Viability remains between $0.885$ and $1.000$ throughout the episode.
 
-\begin{proposition}[Scaffold handover]
-Under the protocol of §8.2 with constraint-closing organism and viability-gradient constraint policy, the directed-information traces satisfy
-$$\max_{w \geq 6}\, DI(U^{\Omega} \to Q)_w \;\geq\; 10 \cdot \max_{w}\, DI(U^{\text{ext}} \to Q)_w$$
-and the crossover index, the first window in which $DI(U^{\Omega} \to Q) \geq DI(U^{\text{ext}} \to Q)$ after the scaffold has begun to withdraw, is finite. Viability is maintained: $V(Q_w) \geq 0.885$ for all windows.
-\end{proposition}
-
-\noindent\textit{Proof.} Direct evaluation against `simulation/output/results.json`. The peak $DI(U^{\Omega} \to Q)$ over post-scaffold windows is $0.403$ at window $10$. The peak $DI(U^{\text{ext}} \to Q)$ over all windows is $0.037$ at window $7$. The ratio is $10.9$, satisfying the inequality. The crossover index is $w = 6$, with $DI(U^{\text{ext}} \to Q)_6 = 0.016$ and $DI(U^{\Omega} \to Q)_6 = 0.059$. The minimum window-wise viability is $0.885$ at window $10$. $\square$
+The three numbers that fix the shape of the handover are worth stating together. The endogenous channel's post-scaffold peak, $0.403$ at window $10$, stands at $10.9$ times the external channel's peak of $0.037$ at window $7$; the crossover falls at window $6$, where the endogenous directed information has just overtaken the external, $0.059$ against $0.016$; and the minimum window-wise viability, $0.885$ at window $10$, confirms that the organism absorbs the scaffold's basin-steering capacity without ever falling out of the viable basin. These are readings from a single realisation of one stylised protocol, not a theorem about all scaffolds, and they show the healthy handover in the one place the formula was built to watch: the dominant steering channel passes from outside to inside while viability holds.
 
 ### 8.3 The pathological case
 

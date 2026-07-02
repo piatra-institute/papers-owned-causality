@@ -70,3 +70,13 @@ Changes:
 Verification:
 - voice: 0 em-dashes, 0 Pattern-2, 0 numbered-observation lists.
 - build: 15 pages, zero missing-character warnings.
+
+---
+
+## 2026-07-02 — reform pass (strip proof theater)
+
+Corpus reform. The paper's synthesis and its honest disclosure of the non-monotonic within-group ordering (§7.1) were left intact; the target was the "\begin{proposition}...\square" theater the audit flagged, where elementary facts wore theorem clothing.
+
+- paper/PAPER.md §7.1: Proposition [Closure boundary] ("if Γ=0 then 𝔒=0") and its one-line proof ("product of non-negative factors") converted to plain prose. The claim is arithmetic (a product with a zero factor is zero); it needed no proposition environment. Numbers preserved (Δν_T=0.090).
+- paper/PAPER.md §8.2: Proposition [Scaffold handover] and its "Proof. Direct evaluation against results.json" removed; the added content (peak ratio 10.9, crossover values 0.059/0.016, min viability 0.885) folded into prose as readings from a single realisation, explicitly not a theorem. The `\begin{definition}` environments in §6 (Organisation, Owned causality) are legitimate and kept.
+- Verify: no `\begin{proposition}`/`\square` remain; voice 0 errors; refs 0 missing/0 unused; claims unchanged from baseline (5 pre-existing sci-notation/parameter no-matches, none introduced); check => PASS; synced.
